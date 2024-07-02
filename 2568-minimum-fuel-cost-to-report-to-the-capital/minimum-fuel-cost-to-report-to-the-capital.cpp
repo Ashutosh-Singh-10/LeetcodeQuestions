@@ -11,7 +11,7 @@ long long dfs(vector<vector<int>> & gr,long long & ans,int &seats,int cur,int pr
         
     }
     if(cur!=0)
-    ans+=(sum/seats)+(sum%seats?1:0);
+    ans+=sum/seats+(sum%seats?1:0);
     return sum;
 
 }
