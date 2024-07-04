@@ -12,12 +12,7 @@ class Solution {
 public:
     ListNode* mergeNodes(ListNode* head) {
         ListNode * par=head;
-        while(head!=NULL)
-        {
-            if(head->val==0)break;
-            head=head->next;
-        }
-        if(head==NULL) return par;
+      
         ListNode * lst=head;
         head=head->next;
         int sum=0;
