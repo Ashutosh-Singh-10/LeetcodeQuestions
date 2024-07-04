@@ -13,13 +13,7 @@ int fun(vector<int> &vec,int k)
             
         }
     }
-    // for(auto &i:vec) cout<<i<<" ";cout<<endl;;
-    // for(auto &i:dp)
-    // {
-    //     for(auto &j:i) cout<<j<<" ";
-    //     cout<<endl;
-    // }
-    // cout<<endl;
+ 
     return ans;
     
 
