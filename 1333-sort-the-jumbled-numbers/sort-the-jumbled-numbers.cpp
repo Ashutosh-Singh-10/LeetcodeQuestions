@@ -35,7 +35,7 @@ public:
         }
         sort(vec.begin(),vec.end());
         vector<int> ans(n);
-        for(int i=0;i<n;i++){ ans[i]=nums[vec[i].second]; cout<<vec[i].first<<" ";}
+        for(int i=0;i<n;i++){ ans[i]=nums[vec[i].second]; }
         return ans;
         
     }
