@@ -15,10 +15,6 @@ public:
         {
             if(i!=prev) 
             {
-                // if(i%2==0)  
-                // dfs(gr,i,cur,cost+2,next,vec,mxcost);
-                // else
-                // dfs(gr,i,cur,cost+1,next,vec,mxcost);
                 dfs(gr,i,cur,cost,next,vec,mxcost);
             }
         }
@@ -40,10 +36,7 @@ public:
         dfs(gr,next,-1,0,next,vec,mxcost);
         mxcost=0;
         dfs(gr,next,-1,0,next,vec,mxcost);
-        mxcost=0;
-        dfs(gr,next,-1,0,next,vec,mxcost);
-        mxcost=0;
-        dfs(gr,next,-1,0,next,vec,mxcost);
+        
         return vec;
         
     }
