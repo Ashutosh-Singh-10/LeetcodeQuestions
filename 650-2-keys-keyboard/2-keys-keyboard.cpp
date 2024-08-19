@@ -1,17 +1,20 @@
 class Solution {
 public:
+
     int minSteps(int n) {
-        int x=0;
-        int ans=0;
-        for(int i=2;i<=n;i++)
+        if(n==1) return 0;
+        for(int i=n-1;i>=1;i--)
         {
-            while(n%i==0)
+            if(n%i==0)
             {
-                n/=i;
-                ans+=i;
+                return minSteps(i)+n/i;
+
             }
         }
-        return ans;
+
+
+
+        return 0;
         
     }
 };
