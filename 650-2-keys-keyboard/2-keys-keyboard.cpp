@@ -8,12 +8,8 @@ public:
             if(n%i==0)
             {
                 return minSteps(i)+n/i;
-
             }
         }
-
-
-
         return 0;
         
     }
