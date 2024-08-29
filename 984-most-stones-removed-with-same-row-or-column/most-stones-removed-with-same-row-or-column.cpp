@@ -73,14 +73,24 @@ public:
     int removeStones(vector<vector<int>>& stones) {
         int n=stones.size();
         DSU ds(n);
+        map<int,vector<int>> a,b;
         for(int i=0;i<n;i++)
         {
-            for(int j=i+1;j<n;j++)
+            a[stones[i][0]].push_back(i);
+            b[stones[i][1]].push_back(i);
+        }
+        for(auto &[_,vec]:a)
+        {
+            for(int i=1;i<vec.size();i++)
             {
-                if(stones[i][0]==stones[j][0] || stones[i][1]==stones[j][1])
-                {
-                    ds.join(i,j);
-                }
+                ds.join(vec[i],vec[i-1]);
+            }
+        }
+        for(auto &[_,vec]:b)
+        {
+            for(int i=1;i<vec.size();i++)
+            {
+                ds.join(vec[i],vec[i-1]);
             }
         }
         map<int,int> mp;
