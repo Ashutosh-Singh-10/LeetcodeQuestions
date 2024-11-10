@@ -14,7 +14,6 @@ public:
             }
             while(val>=k)
             {
-                cout<<idx;
                 ans=min(ans,i-idx+1);
                 
                 for(int j=0;j<=30;j++)
