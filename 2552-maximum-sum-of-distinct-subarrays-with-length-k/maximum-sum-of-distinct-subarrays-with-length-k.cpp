@@ -7,13 +7,7 @@ public:
         for(int i=0;i<nums.size();i++)
         {
             sum+=(long long)nums[i];
-            while(i-idx+1>k)
-            {
-                st.erase(nums[idx]);
-                sum-=(long long)nums[idx];
-                idx++;
-            }
-            while(st.count(nums[i]))
+            while(i-idx+1>k || st.count(nums[i])) 
             {
                 st.erase(nums[idx]);
                 sum-=(long long)nums[idx];
