@@ -1,7 +1,7 @@
 class Solution {
 public:
     long long maximumSubarraySum(vector<int>& nums, int k) {
-        set<long long> st;
+        unordered_set<long long> st;
         long long idx=0,ans=0;
         long long sum=0;
         for(int i=0;i<nums.size();i++)
