@@ -19,7 +19,6 @@ public:
             if(nums[i]+nums[i]>=lower && nums[i]+nums[i]<=upper ) ans--;
         }
         return ans/2;
-        // 0 1 4 5 7
         
     }
 };
