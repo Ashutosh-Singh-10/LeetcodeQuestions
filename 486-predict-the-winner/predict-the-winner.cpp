@@ -36,6 +36,7 @@ public:
 
     }
     bool predictTheWinner(vector<int>& nums) {
+        if(nums.size()%2==0) return 1;
         unordered_map<string,int> mp;
         
         
