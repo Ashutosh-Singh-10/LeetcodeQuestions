@@ -26,6 +26,7 @@ public:
                 first=prev;
                 second=i;
             }
+            if(second-first==2) break;
             prev=i;
         }
         return {first,second};
