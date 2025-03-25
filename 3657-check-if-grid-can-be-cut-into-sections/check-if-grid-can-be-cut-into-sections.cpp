@@ -38,7 +38,6 @@ int check(vector<pair<ll,ll>> vec,ll n)
 		}
 		cmx=max(cmx,i.second);
 	}
-    cout<<cnt<<" ";
 	if(cnt>=2) return 1;
 	return 0;
 
