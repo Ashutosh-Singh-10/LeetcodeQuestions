@@ -23,8 +23,7 @@ public:
                 ans.push_back(sz);
                 sz=0;
             }
-            for(int i=97;i<110;i++) cout<<cur[i]<<" ";cout<<endl;
-            for(int i=97;i<110;i++) cout<<cnt[i]<<" ";cout<<endl;
+           
             
             
             
