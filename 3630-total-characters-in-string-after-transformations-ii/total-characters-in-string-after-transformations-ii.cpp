@@ -94,7 +94,6 @@ public:
 			int cur=(i+1)%26;
 			for(int j=0;j<nums[i];j++)
 			{
-                // cout<<i<<"->"<<cur<<" ";
 				B.a[i][cur]++;
 				cur=(cur+1)%26;
 			}
@@ -107,18 +106,10 @@ public:
 		{
 			for(auto &j:i)
             {
-
                 ans=(j+ans)%mod;
-                // cout<<j<<" ";
             } 
-            // cout<<endl;
 		}
         
 		return ans;
-		
-
-
-		
-        
     }
 };
