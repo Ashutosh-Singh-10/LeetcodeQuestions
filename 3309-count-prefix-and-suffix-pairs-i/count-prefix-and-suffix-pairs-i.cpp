@@ -1,27 +1,22 @@
 class Solution {
 public:
+    int check(string &a,string &b)
+    {
+        if(a.size()>b.size() )return 0;
+        
+        for(int i=0;i<a.size();i++) if(a[i]!=b[i] || b[b.size()-i-1]!=a[a.size()-i-1]) return 0;
+        return 1;
+    }
     int countPrefixSuffixPairs(vector<string>& words) {
-        int n = words.size();
-        int count = 0;
-
-        // Step 1: Iterate through each pair of words
-        for (int i = 0; i < n; ++i) {
-            for (int j = i + 1; j < n; ++j) {
-                string& str1 = words[i];
-                string& str2 = words[j];
-
-                // Step 2: Skip if the first string is larger than the second
-                if (str1.size() > str2.size()) continue;
-
-                // Step 3: Check if str1 is both the prefix and suffix of str2
-                if (str2.find(str1) == 0 &&
-                    str2.rfind(str1) == str2.size() - str1.size()) {
-                    ++count;
-                }
+        int ans=0,n=words.size();
+        for(int i=0;i<n;i++)
+        {
+            for(int j=i+1;j<n;j++) 
+            {
+                ans+=check(words[i],words[j]);
             }
         }
-
-        // Step 4: Return the total count of prefix-suffix pairs
-        return count;
+        return ans;
+        
     }
 };
