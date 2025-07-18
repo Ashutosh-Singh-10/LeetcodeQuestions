@@ -21,7 +21,6 @@
 class Solution {
 public:
     long long minimumDifference(vector<int>& nums) {
-        // reverse(nums.begin(),nums.end());
         ll sz=nums.size();
         ll n=sz/3;
         
@@ -51,7 +50,6 @@ public:
             sm+=nums[i];
         }
         ll ans=pr[sz-n-1]-sm;
-        cout<<"last "<<sm<<endl;
        
         for(int i=sz-n-1;i>=n;i--)
         {
@@ -60,10 +58,7 @@ public:
             sm-=tp.top();
             tp.pop();
             ans=min(ans,pr[i-1]-sm);
-            cout<<sm<<" ";
         }
-        cout<<endl;
-        for(auto &i:pr) cout<<i<<" ";
         
         return ans;
 
