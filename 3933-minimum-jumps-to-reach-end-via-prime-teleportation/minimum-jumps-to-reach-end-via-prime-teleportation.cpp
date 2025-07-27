@@ -30,55 +30,45 @@ public:
 
         } 
         queue<int> qu;
-        vector<int> vis(n,0);
-        vis[0]=1;
+        vector<int> vis(n,-1);
+        vis[0]=0;
         qu.push(0);
-        qu.push(-1);
+        
         int ans=0;
         unordered_set<int> primeVis;
         while(qu.size())
         {
-            if(qu.front()==-1)
-            {
-                ans++;
-                qu.push(-1);
-                qu.pop();
-                continue;
-            }
-            if(qu.front()==n-1) return ans;
+            
+            if(qu.front()==n-1) return  vis[n-1];
             int x=qu.front();
-            // cout<<x<<" ";
             qu.pop();
             
-            if(vis[x+1]==0) 
+            if(vis[x+1]==-1) 
             {
                 qu.push(x+1);
-                vis[x+1]=1;
+                vis[x+1]=vis[x]+1;
             }
-            if(x!=0 && vis[x-1]==0) 
+            if(x!=0 && vis[x-1]==-1) 
             {
                 qu.push(x-1);
-                vis[x-1]=1;
+                vis[x-1]=vis[x]+1;
             }
             if(vec[nums[x]]==0 && primeVis.count(nums[x])==0)
             {
                 primeVis.insert(nums[x]);
-                // cout<<nums[x]<<" ";
                 for(int i=nums[x];i<=mx;i+=nums[x])
                 {
                     if(data.count(i)==0) continue;
                     for(auto &j:data[i])
                     {
-                        if(vis[j]==0)
+                        if(vis[j]==-1)
                         {
-                            vis[j]=1;
+                            vis[j]=vis[x]+1;
                             qu.push(j);
                         }
-                        // cout<<j<< " ";
 
                     }
                 }
-                // cout<<"}";
             }
         }
         return 0;
