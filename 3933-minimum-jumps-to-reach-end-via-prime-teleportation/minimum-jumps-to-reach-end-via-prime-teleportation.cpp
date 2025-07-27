@@ -63,9 +63,10 @@ public:
             if(vec[nums[x]]==0 && primeVis.count(nums[x])==0)
             {
                 primeVis.insert(nums[x]);
-                cout<<nums[x]<<" ";
+                // cout<<nums[x]<<" ";
                 for(int i=nums[x];i<=mx;i+=nums[x])
                 {
+                    if(data.count(i)==0) continue;
                     for(auto &j:data[i])
                     {
                         if(vis[j]==0)
