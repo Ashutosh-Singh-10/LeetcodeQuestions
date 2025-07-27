@@ -4,7 +4,7 @@ class Solution {
 public:
     void calculate(){
         vec[0]=vec[1]=1;
-        for(int i=2;i*i<mex;i++)
+        for(int i=2;i<mex;i++)
         {
             if(vec[i]==0)
             {
@@ -27,7 +27,6 @@ public:
         {
             data[nums[i]].push_back(i);
             mx=max(mx,nums[i]);
-
         } 
         queue<int> qu;
         vector<int> vis(n,-1);
