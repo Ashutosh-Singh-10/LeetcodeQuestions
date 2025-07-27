@@ -4,7 +4,7 @@ class Solution {
 public:
     void calculate(){
         vec[0]=vec[1]=1;
-        for(int i=2;i<mex;i++)
+        for(int i=2;i*i<mex;i++)
         {
             if(vec[i]==0)
             {
@@ -19,7 +19,8 @@ public:
 
     }
     int minJumps(vector<int>& nums) {
-        if(vec[4]==0) calculate();
+        // if(vec[4]==0) 
+        calculate();
         int n=nums.size();;
         int mx=0;
         unordered_map<int,vector<int>> data;
@@ -27,6 +28,7 @@ public:
         {
             data[nums[i]].push_back(i);
             mx=max(mx,nums[i]);
+
         } 
         queue<int> qu;
         vector<int> vis(n,-1);
