@@ -19,7 +19,7 @@ public:
 
     }
     int minJumps(vector<int>& nums) {
-        // if(vec[4]==0) 
+        if(vec[4]==0) 
         calculate();
         int n=nums.size();;
         int mx=0;
