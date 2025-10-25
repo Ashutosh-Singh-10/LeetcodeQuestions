@@ -7,7 +7,7 @@ public:
         if(dig>num) return "";
         string ans;
         while(ans.size()<num){
-            if(sum>9) {
+            if(sum>=9) {
                 ans.push_back('9');
                 sum-=9;
             }
