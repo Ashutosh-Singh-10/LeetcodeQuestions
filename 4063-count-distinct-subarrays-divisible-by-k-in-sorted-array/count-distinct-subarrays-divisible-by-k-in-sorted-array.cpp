@@ -29,14 +29,9 @@ public:
                 long long sum=el*i.size();
                 long long tot=sum/lcm;
                 if(tot>1) ans+=tot-1;
-
             }
-            
             if(x>1) ans-=x-1;
-            //  cout<<x<<" ";
         }
-        return ans;
-
         return ans;
         
     }
