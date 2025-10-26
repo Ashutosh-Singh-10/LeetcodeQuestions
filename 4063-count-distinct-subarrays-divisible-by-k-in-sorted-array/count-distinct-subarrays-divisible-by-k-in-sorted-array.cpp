@@ -33,7 +33,7 @@ public:
             }
             
             if(x>1) ans-=x-1;
-             cout<<x<<" ";
+            //  cout<<x<<" ";
         }
         return ans;
 
