@@ -1,6 +1,5 @@
     #include <bits/stdc++.h>
     using namespace std;
-
     #define loop(i,a,b) for(long long i=a;i<b;i++)
     #define roop(i,a,b) for(long long i=a-1;i>=b;i--)
     #define all(p) p.begin(),p.end()
@@ -26,29 +25,17 @@ public:
         for(auto &i:vec){
             int order=st.order_of_key(i.second);
             int diff=st.size()-order;
-            // cout<<diff<<" ---";
             if(diff==0){
                 st.insert(i.first);
                 st.insert(i.first-1);
-            }
-            
+            }            
             if(diff==1){
                 if(st.find(i.first)==st.end()){
                     st.insert(i.first);
                 }
                 else st.insert(i.first-1);
             }
-            
-        // for(auto &i:st) cout<<i<<" ";
-        // cout<<endl;
         }
-        // st.insert(5);
-        // st.insert(4);
-        // cout<<st.order_of_key(4);
-        // cout<<st.order_of_key(6);
         return st.size();
-
-
-        
     }
 };
