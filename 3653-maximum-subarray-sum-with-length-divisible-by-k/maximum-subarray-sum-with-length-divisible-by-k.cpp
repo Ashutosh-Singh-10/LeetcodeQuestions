@@ -9,14 +9,9 @@ public:
             for(int j=i+k;j<=n;j+=k){
                 sum+=pre[j]-pre[j-k];
                 ans=max(ans,sum);
-                // cout<<j<<" "<<sum<<endl;
                 if(sum<0) sum=0;
-            }
-            
-
-            
+            }   
         }
-        // for(auto &i:pre) cout<<i<<" ";
         return ans;
   
         
