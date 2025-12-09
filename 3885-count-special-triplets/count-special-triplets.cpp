@@ -10,11 +10,7 @@ public:
             }
             b[i]=(b[i]+a[i*2])%mod;
             a[i]++;
-            // for(auto &[x,y]:a) cout<<x<<" "<<y<<" --- ";
-            // cout<<endl;
-            // for(auto &[x,y]:b) cout<<x<<" "<<y<<" --- ";
-            // cout<<endl;
-            // cout<<"ans --- "<<ans<<endl;
+         
         }
         return ans;
         
