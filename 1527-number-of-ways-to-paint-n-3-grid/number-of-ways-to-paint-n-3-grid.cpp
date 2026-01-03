@@ -1,6 +1,6 @@
 class Solution {
 public:
-        vector<pair<long long,long long>> vec={
+        vector<pair<int,int>> vec={
             {0,4},{0,5},{0,7},{0,8},{0,9},
             {1,4},{1,6},{1,7},{1,8},
             {2,4},{2,5},{2,8},{2,9},{2,11},
@@ -11,8 +11,8 @@ public:
             {7,9},{7,10},{7,11}
         };
     int numOfWays(int n) {
-        long long mod=1e9+7,ans=0;
-        vector<vector<long long>> dp(n+1,vector<long long>(12,0));
+      int mod=1e9+7,ans=0;
+        vector<vector<int>> dp(n+1,vector<int>(12,0));
         for(int i=0;i<12;i++) dp[0][i]=1;
         for(int i=1;i<n;i++){
             for(auto &[a,b]:vec){
