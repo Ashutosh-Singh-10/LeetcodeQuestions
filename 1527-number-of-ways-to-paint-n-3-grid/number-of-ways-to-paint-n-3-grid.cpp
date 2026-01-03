@@ -16,11 +16,8 @@ public:
         for(int i=0;i<12;i++) dp[0][i]=1;
         for(int i=1;i<n;i++){
             for(auto &[a,b]:vec){
-                // cout<<dp[i][a]<<" ";
                 dp[i][a]=(dp[i][a]+dp[i-1][b])%mod;
                 dp[i][b]=(dp[i][b]+dp[i-1][a])%mod;
-                dp[i][a]%=mod;
-                dp[i][b]%=mod;
             }
         }
         for(auto &i:dp[n-1]){
