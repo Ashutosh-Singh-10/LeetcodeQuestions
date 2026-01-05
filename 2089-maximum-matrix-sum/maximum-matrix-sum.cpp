@@ -40,14 +40,9 @@ public:
                 {
                     cnt++;
                 }
-                
             }
         }
         if(cnt%2) ans-=mn+mn;
         return ans;
-
-
-        
-        
     }
 };
