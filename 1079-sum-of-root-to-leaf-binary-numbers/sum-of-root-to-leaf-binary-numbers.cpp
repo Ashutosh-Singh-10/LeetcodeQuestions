@@ -16,11 +16,7 @@ public:
         x<<=1;
         x+=root->val;
         if(root->right==NULL && root->left==NULL) return x;
-        // int a=sumRootToLeaf(root->left,x);
-        // int b=sumRootToLeaf(root->right,x);
-        
-        // cout<<root->val<<" "<<a<<" "<<b<<endl;;
-        // return a+b;
+
         return sumRootToLeaf(root->left,x)+sumRootToLeaf(root->right,x);
 
         
