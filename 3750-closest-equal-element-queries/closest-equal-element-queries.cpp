@@ -13,7 +13,6 @@ public:
             int el=nums[i];
             if(mp[el].size()<2){
                 ans.push_back(-1);
-                // cout<<"----"<<endl;
                 continue;
             }
             ans.push_back(min( 
@@ -36,33 +35,7 @@ public:
                 )
                 }
             ));
-            // vector<int> tmp={
-            //     abs(mp[el][vec[i]]-mp[el][
-            //         (vec[i]-1+mp[el].size())%mp[el].size()
-            //         ]
-            //     ),
-            //     n-abs(mp[el][vec[i]]-mp[el][
-            //         (vec[i]-1+mp[el].size())%mp[el].size()
-            //         ]
-            //     ),
-            //     abs(mp[el][vec[i]]-mp[el][
-            //         (vec[i]+1+mp[el].size())%mp[el].size()
-            //         ]
-            //     ),
-            //     n-abs(mp[el][vec[i]]-mp[el][
-            //         (vec[i]+1+mp[el].size())%mp[el].size()
-            //         ]
-            //     )
-            //     };
-                // for(auto &i:tmp) cout<<i<<" --- ";cout<<endl;
-            // cout<<abs(mp[el][vec[i]]-mp[el][
-            //         (vec[i]-1+mp[el].size())%mp[el].size()
-            //         ]
-            //     )<<"   ---  "<<abs(mp[el][vec[i]]-mp[el][
-            //         (vec[i]+1+mp[el].size())%mp[el].size()
-            //         ]
-            //     )<<endl;
-
+           
 
         }
         return ans;
